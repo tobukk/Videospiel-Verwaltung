@@ -81,7 +81,7 @@ Spiel hinzufügen
    - Genre: Z.B. Shooter, Survival, Action
    - Altersfreigabe: 0, 6, 12, 16, 18
    - Multiplayer: Checkbox aktivieren falls zutreffend
-   - Preis:** Preis in Euro
+   - Preis: Preis in Euro
 2. Klicke auf "Speichern"
 
 Filtern
