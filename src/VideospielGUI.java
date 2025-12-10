@@ -198,34 +198,26 @@ public static void main(String[] args) {
     public void filterSpiele() {
         String filter = filterField.getText().toLowerCase().trim();
         table.setRowCount(0);
+
         for (Spiel t : spieleListe) {
-
-
-            if (imfilter(t, filter)) {
-            boolean istMultiplayer = t.isistMultiplayer();
             String janein;
-
-            if (istMultiplayer == true) {
+            if (t.isistMultiplayer() == true) {
                 janein = "Ja";
             } else {
                 janein = "Nein";
             }
 
-            table.addRow(new Object[]{
-                    t.getTitel(),
-                    t.getGenre(),
-                    t.getAltersfreigabe(),
-                    janein,
-                    t.getPreis()
-            });
-        }
-        }
-}
+            String suchtext = t.getTitel() + " " + t.getGenre() + " " +
+                    t.getAltersfreigabe() + " " + janein + " " + t.getPreis();
 
-//Methode um das gefilterte auszugeben
-private boolean imfilter(Spiel t, String filter){
-        return t.FilterSpiele().toLowerCase().contains(filter);
+            if (suchtext.toLowerCase().contains(filter)) {
+                table.addRow(new Object[]{
+                        t.getTitel(), t.getGenre(), t.getAltersfreigabe(), janein, t.getPreis()
+                });
+            }
+        }
     }
+
 
     //Methode zur Berechnung des Gesamtpreises
     public double gesamtpreis() {
