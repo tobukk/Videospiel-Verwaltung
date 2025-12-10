@@ -143,9 +143,7 @@ public class VideospielGUI extends JFrame {
 
 
     //Erstellung von GUI
-public static void main(String[] args) {
-        new VideospielGUI();
-    }
+
 
 //Methode für das Einfügen von Standartspielen
     private void initObjekte() {
